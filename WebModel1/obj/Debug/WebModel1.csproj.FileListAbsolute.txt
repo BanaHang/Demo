@@ -1,0 +1,5 @@
+D:\管理信息系统网站\WebModel1\WebModel1\bin\WebModel1.dll
+D:\管理信息系统网站\WebModel1\WebModel1\bin\WebModel1.pdb
+D:\管理信息系统网站\WebModel1\WebModel1\obj\Debug\WebModel1.dll
+D:\管理信息系统网站\WebModel1\WebModel1\obj\Debug\WebModel1.pdb
+D:\管理信息系统网站\WebModel1\WebModel1\obj\Debug\WebModel1.csprojResolveAssemblyReference.cache

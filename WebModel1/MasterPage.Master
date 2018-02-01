@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebModel1.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        a:link
+        {
+            text-decoration:none;           
+        }
+        a:hover
+        {
+            text-decoration:underline;
+        }
+        a.blacklink
+        {
+            color:Black;
+        }
+        a.whitelink
+        {
+            color:White;            
+        }
+        
+        .dropdown
+        {
+            display:inline-block;
+        }
+
+        .dropdowncontent
+        {
+            display: none;
+            position: absolute;
+            right:50px;
+            background-color: #f9f9f9;
+            text-align:center;
+            min-width: 160px;
+            padding: 12px 16px;
+        }
+        .dropdown:hover .dropdowncontent
+        {
+            display: block;
+        }
+        .style4
+        {
+            width: 300px;
+            height: 40px;
+        }
+        .style5
+        {
+            width: 300px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+
+    <!----header----->
+    <div class="header" style="padding:20px 50px">
+        <a href="index.aspx" id="home">
+        <asp:Image ID="Image1" runat="server" src="images\logo.png"/></a>     
+         
+      <div id="div1" runat="server" style="width:200px; position:absolute; right:10px; top:20px">
+        <a href="UserLogin.aspx?id=login" class="blacklink">登陆</a>&nbsp;
+        <div class="dropdown">
+        <a href="#">
+            <img id="Image2" alt="" src="images\cart.png" /></a>
+        <div class="dropdowncontent">
+            <p>请先登陆！</p>
+        </div>
+        </div>
+      </div>
+
+      <div id="div2" runat="server" style="width:200px; position:absolute; right:10px; top:20px">
+        <a href="ShoppingCart.aspx"><asp:Label ID="Label1" runat="server" Text=""></asp:Label></a>
+        <a href="ShoppingCart.aspx" id="cart">
+            <img id="Image3" alt="" src="images\cart.png" /></a>
+      </div>
+   </div>
+    <!-----menubar------->
+    <div class="menubar" style="padding-top:2.5px;padding-bottom:2.5px;padding-left:50px;padding-right:50px; background-color:#00C5CD; color:White; margin-bottom: 0px">
+    <h3><a href="index.aspx" class="whitelink"> HOME</a> |
+        <a href="showpros.aspx?id=%" class="whitelink"> SALES</a> |
+        <a href="showpros.aspx?id=衣服" class="whitelink"> CLOTHES</a> |
+        <a href="showpros.aspx?id=裤子" class="whitelink"> PANTS</a> |
+        <a href="showpros.aspx?id=鞋子" class="whitelink"> SHOES</a> |
+        <a href="showpros.aspx?id=包" class="whitelink"> BAGS</a> |
+        <a href="#" class="whitelink"> SERVICE</a> |
+        <a href="#" class="whitelink"> CONTACT US</a></h3>
+    </div>
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <!--------links---------->
+    <div class="links" style="height:auto;padding:50px; background-color:#00C5CD; color:White">
+        <center>
+        <table border="0px" style="font-size:large">
+        <tr>
+          <td class="style4"><h2>ORIGINALS</h2></td>
+          <td class="style4"><h2>ADIDAS NEO</h2></td>
+          <td class="style4"><h2>Stella McCartney</h2></td>
+          <td class="style4"><h2>ATHLETICS</h2></td>
+        </tr>
+        <tr>
+        <td class="style5"><a href="" class="whitelink">Alexis Hudson</a></td>
+        <td class="style5"><a href="" class="whitelink">Alexis Hudson</a></td>
+        <td class="style5"><a href="" class="whitelink">Alexis Hudson</a></td>
+        <td class="style5"><a href="" class="whitelink">Alexis Hudson</a></td>
+        </tr>
+        <tr>
+        <td class="style5"><a href="" class="whitelink">American Apparel</a></td>
+        <td class="style5"><a href="" class="whitelink">American Apparel</a></td>
+        <td class="style5"><a href="" class="whitelink">American Apparel</a></td>
+        <td class="style5"><a href="" class="whitelink">American Apparel</a></td>
+        </tr>
+        <tr>
+        <td class="style5"><a href="" class="whitelink">Ben Sherman</a></td>
+        <td class="style5"><a href="" class="whitelink">Ben Sherman</a></td>
+        <td class="style5"><a href="" class="whitelink">Ben Sherman</a></td>
+        <td class="style5"><a href="" class="whitelink">Ben Sherman</a></td>
+        </tr>
+        <tr>
+        <td class="style5"><a href="" class="whitelink">Big Buddha</a></td>
+        <td class="style5"><a href="" class="whitelink">Big Buddha</a></td>
+        <td class="style5"><a href="" class="whitelink">Big Buddha</a></td>
+        <td class="style5"><a href="" class="whitelink">Big Buddha</a></td>
+        </tr>
+        <tr>
+        <td class="style5"><a href="" class="whitelink">Channel</a></td>
+        <td class="style5"><a href="" class="whitelink">Channel</a></td>
+        <td class="style5"><a href="" class="whitelink">Channel</a></td>
+        <td class="style5"><a href="" class="whitelink">Channel</a></td>
+        </tr>
+        </table></center>
+    </div>
+
+    <!---------------footer----------------->
+    <div class="footer" style="background-color:#008B8B; padding:5px">
+    <center><h5 style=" color:White">Copyright &copy; 2017.SHIHANG All rights reserved.</h5>
+    <h5 style=" color:White">航哥 仅供学习交流 Email:819409731@qq.com</h5>
+    <a href="Managerlogin.aspx" class="whitelink">管理员入口</a></center>
+    </div>
+
+    </form>
+</body>
+</html>
